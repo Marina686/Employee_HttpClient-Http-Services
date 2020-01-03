@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { AngularMaterialModule } from './material.module';
 
 // HttpClient module for RESTful API
 import { HttpClientModule } from '@angular/common/http';
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,11 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
   ],
   imports: [
     BrowserModule,
+    AngularMaterialModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

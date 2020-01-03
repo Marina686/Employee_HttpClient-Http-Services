@@ -1,14 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../shared/rest-api.service';
 
+export interface PeriodicElement { 
+  userId: number;
+  name: string;
+  email: string;
+  phone: number;
+  action: string;
+}
+const ELEMENT_DATA: PeriodicElement[] = [];
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent implements OnInit {
-
+  displayedColumns: string[] = ['User Id', 'Name', 'Email', 'Phone', ];
+  columnsToDisplay: string[] = this.displayedColumns.slice();
+  data: PeriodicElement[] = ELEMENT_DATA;
   Employee: any = [];
+
 
   constructor(
     public restApi: RestApiService

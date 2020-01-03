@@ -1,22 +1,17 @@
 <div class="container custom-container">
-  <div class="col-md-12">
+  <div class="example-container">
     <h3 class="mb-3 text-center">Create Employee</h3>
+    <mat-form-field>
+      <input matInput [(ngModel)]="employeeDetails.name" placeholder="Name">
+    </mat-form-field>
 
-    <div class="form-group">
-      <input type="text" [(ngModel)]="employeeDetails.name" class="form-control" placeholder="Name">
-    </div>
+   <mat-form-field>
+     <input matInput [(ngModel)]="employeeDetails.email" placeholder="Email">
+   </mat-form-field>
 
-    <div class="form-group">
-      <input type="text" [(ngModel)]="employeeDetails.email" class="form-control" placeholder="Email">
-    </div>
-
-    <div class="form-group">
-      <input type="text" [(ngModel)]="employeeDetails.phone" class="form-control" placeholder="Phone">
-    </div>
-
-    <div class="form-group">
-      <button class="btn btn-success btn-lg btn-block" (click)="addEmployee()">Create Employee</button>
-    </div>
-
-  </div>
+    <mat-form-field>
+      <input matInput [(ngModel)]="employeeDetails.phone" placeholder="Phone">
+    </mat-form-field>
+    <button mat-button (click)="addEmployee()">Create Employee</button>
+  </div> 
 </div>
